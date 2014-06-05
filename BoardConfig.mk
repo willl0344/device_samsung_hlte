@@ -49,7 +49,6 @@ BOARD_EGL_CFG := device/samsung/hlte/egl.cfg
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/hlte/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -64,10 +63,16 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1572864000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 28651290624
 BOARD_FLASH_BLOCK_SIZE := 131072
 
+BOARD_RECOVERY_SWIPE := true
+
 # bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/hlte/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/hlte/bluetooth/vnd_hlte.txt
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
+
+# camera
+TARGET_PROVIDES_CAMERA_HAL_MSM8974 := true
+TARGET_PROVIDES_CAMERA_HAL :=
 
 # NFC
 BOARD_NFC_HAL_SUFFIX := msm8974
@@ -81,6 +86,7 @@ TARGET_QCOM_MEDIA_VARIANT := caf-new
 TARGET_QCOM_DISPLAY_VARIANT := caf-new
 BOARD_USES_LEGACY_ALSA_AUDIO := 
 TARGET_QCOM_AUDIO_VARIANT := caf
+TARGET_USES_QCOM_BSP := true
 
 # Audio settings
 BOARD_USES_CUSTOM_AUDIO_PLATFORM_PATH := device/samsung/hlte/audio/platform
@@ -119,15 +125,17 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := hltexx,hltespr,hltetmo,SM-N900T,hltecan,hlteatt,hltevzw,hlte
+TARGET_OTA_ASSERT_DEVICE := hltexx,hltespr,hltetmo,SM-N900T,hltecan,hlteatt,hltevzw,hlteusc,hlte
 
 TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hlte_eur_defconfig
 
-# PowerHAL extension
+# PowerHAL
+TARGET_POWERHAL_VARIANT := qcom
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/samsung/hlte/power/power_ext.c
 
 # The "new" GPS is really the old GPS, override it.
 BOARD_HAVE_NEW_QC_GPS :=
+TARGET_PROVIDES_GPS_LOC_API := true
 
 # We don't use old-ass RPC
 TARGET_NO_RPC := true

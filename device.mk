@@ -51,6 +51,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/hlte/media/media_profiles.xml:system/etc/media_profiles.xml
 
+# Note3 Advanced Settings
+PRODUCT_PACKAGES += \
+GalaxyNote3Settings
+
 # Extended media support
 PRODUCT_PACKAGES += \
     qcmediaplayer
@@ -102,7 +106,8 @@ PRODUCT_PACKAGES += \
     gralloc.msm8974 \
     hwcomposer.msm8974 \
     memtrack.msm8974 \
-    power.msm8974
+    power.msm8974 \
+    camera.msm8974
 
 # Audio
 PRODUCT_PACKAGES += \
