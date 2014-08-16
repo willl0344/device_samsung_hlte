@@ -10,19 +10,14 @@
     "branch": "kk4.4"
   },
   {
-   "repository": "SlimRoms/device_samsung_msm8960-common",
-    "target_path": "device/samsung/msm8960-common",
+   "repository": "SlimRoms/device_samsung_msm8974-common",
+    "target_path": "device/samsung/msm8974-common",
     "branch": "kk4.4"
   },
   {
     "repository": "CyanogenMod/android_kernel_samsung_hlte",
     "target_path": "kernel/samsung/hlte",
     "branch":      "cm-11.0"
-  },
-  {
-    "repository":  "SlimRoms/proprietary_vendor_samsung",
-    "target_path": "vendor/samsung",
-    "branch":      "kk4.4"
   },
   {
     "repository":  "SlimRoms/hardware_qcom_display-caf-new",
